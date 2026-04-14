@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallin Cox — Healthcare Operations & Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f1f3d;
+    --navy-mid: #1a3260;
+    --accent: #2563eb;
+    --accent-light: #eff4ff;
+    --text: #0f1f3d;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --surface: #f8fafc;
+    --white: #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 2rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hero-inner {
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--accent);
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 520px;
+    line-height: 1.8;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .pill {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--surface);
+    letter-spacing: 0.01em;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--navy-mid); transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--navy);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, transform 0.15s;
+  }
+
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: var(--accent);
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.85;
+  }
+
+  .about-text p:last-child { margin-bottom: 0; }
+
+  .credentials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .credential-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    transition: border-color 0.2s;
+  }
+
+  .credential-item:hover { border-color: var(--accent); }
+
+  .credential-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .credential-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .credential-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .credential-sub {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--white);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(15,31,61,0.08);
+  }
+
+  .project-thumb {
+    height: 180px;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-thumb-placeholder {
+    text-align: center;
+    color: var(--text-muted);
+  }
+
+  .project-thumb-placeholder svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--border);
+    fill: none;
+    stroke-width: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .project-thumb-placeholder span {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--border);
+    letter-spacing: 0.05em;
+  }
+
+  .project-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .project-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .project-tools {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .tool-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .project-link {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .project-link:hover { text-decoration: underline; }
+
+  /* EXPERIENCE */
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .exp-item:last-child { border-bottom: none; }
+
+  .exp-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding-top: 3px;
+    line-height: 1.5;
+  }
+
+  .exp-role {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+
+  .exp-org {
+    font-size: 0.875rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .exp-bullets li {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    padding-left: 1.1rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .exp-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--border);
+    font-size: 0.75rem;
+    top: 3px;
+  }
+
+  /* CONTACT */
+  .contact-inner {
+    background: var(--navy);
+    border-radius: 20px;
+    padding: 4rem;
+    text-align: center;
+  }
+
+  .contact-inner .section-label { justify-content: center; color: rgba(255,255,255,0.5); }
+  .contact-inner .section-label::before { background: rgba(255,255,255,0.3); }
+
+  .contact-inner .section-title { color: var(--white); margin-bottom: 1rem; }
+
+  .contact-inner .section-sub {
+    color: rgba(255,255,255,0.6);
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .contact-link:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.4);
+  }
+
+  .contact-link svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-inner > * {
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  .hero-eyebrow { animation-delay: 0.1s; }
+  .hero h1 { animation-delay: 0.2s; }
+  .hero-tagline { animation-delay: 0.3s; }
+  .hero-pills { animation-delay: 0.4s; }
+  .hero-cta { animation-delay: 0.5s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .contact-inner { padding: 2.5rem 1.5rem; }
+    nav { padding: 0 1rem; }
+    .nav-links { gap: 1.25rem; }
+  }
+
+  @media (max-width: 480px) {
+    .nav-links li:nth-child(n+4) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Dallin Cox</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Healthcare Operations & Analytics</div>
+    <h1>Healthcare Leader.<br><em>Analyst.</em><br>Problem Solver.</h1>
+    <p class="hero-tagline">Powered by Data & AI — I build operational systems, uncover growth opportunities, and turn complex healthcare data into decisions that matter.</p>
+    <div class="hero-pills">
+      <span class="pill">Director of Operations</span>
+      <span class="pill">HBS CORe</span>
+      <span class="pill">LSS Green Belt</span>
+      <span class="pill">BIDA · CFI</span>
+      <span class="pill">Spanish Fluency</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View My Work →</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About</div>
+  <h2 class="section-title">Operations-first,<br>analytics-obsessed.</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm Dallin Cox, Director of Operations at Retina and Vitreous Surgeons of Utah, where I oversee four clinics, 25+ clinical and administrative staff, and 1,000+ monthly patient visits across Salt Lake County, Utah County, and rural outreach sites.</p>
+      <p>My path into healthcare administration started as a medical assistant — I saw an opportunity to take on operational responsibilities and never looked back. I've since built a track record of turning operational problems into measurable results: $100K+ in annual supply chain savings, $50K+ from reimbursement renegotiation, and a 40% increase in website traffic after bringing digital marketing in-house.</p>
+      <p>I'm especially interested in the intersection of healthcare operations and advanced analytics — building systems, models, and tools that help organizations make faster, smarter decisions. I leverage AI heavily in my work and believe it's the defining skill set for the next generation of healthcare leaders.</p>
+    </div>
+    <div class="credentials-grid">
+      <div class="credential-item">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div>
+          <div class="credential-title">HBS CORe — Harvard Business School</div>
+          <div class="credential-sub">Business Analytics, Economics, Financial Accounting</div>
+        </div>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <div class="credential-title">Lean Six Sigma Green Belt</div>
+          <div class="credential-sub">Six Sigma Council — Process Improvement & Quality</div>
+        </div>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <div class="credential-title">BIDA — Corporate Finance Institute</div>
+          <div class="credential-sub">Business Intelligence & Data Analytics</div>
+        </div>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <div class="credential-title">ACHE Student Associate</div>
+          <div class="credential-sub">American College of Healthcare Executives</div>
+        </div>
+      </div>
+      <div class="credential-item">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div>
+          <div class="credential-title">Spanish — Full Professional Proficiency</div>
+          <div class="credential-sub">Clinical & Conversational · Community Health Initiatives</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Projects</div>
+  <h2 class="section-title">Work that speaks<br>for itself.</h2>
+  <p class="section-sub">Real operational problems. Real data. Real outcomes. Each project below is a live, interactive tool built to solve a specific challenge in my clinic system.</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <div class="project-thumb-placeholder">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dashboard coming soon</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">Geographic Strategy</div>
+        <h3 class="project-title">Utah Retina Patient Growth Analysis</h3>
+        <p class="project-desc">A statewide geographic analysis of 12 months of patient visit data across 355 ZIP codes, identifying underserved markets and expansion opportunities — including a Sanpete/Sevier Corridor opportunity with no competing retina specialist.</p>
+        <div class="project-footer">
+          <div class="project-tools">
+            <span class="tool-tag">Tableau</span>
+            <span class="tool-tag">Claude AI</span>
+            <span class="tool-tag">Utah.gov Data</span>
+          </div>
+          <a href="#" class="project-link">View →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <div class="project-thumb-placeholder">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Dashboard coming soon</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">Operational Efficiency</div>
+        <h3 class="project-title">MA Staffing Optimizer</h3>
+        <p class="project-desc">A dynamic two-week staffing tool for 25+ medical assistants across four clinic locations and three rural outreach sites — auto-populating session schedules, tracking appointment types, and surfacing coverage gaps in real time.</p>
+        <div class="project-footer">
+          <div class="project-tools">
+            <span class="tool-tag">Excel</span>
+            <span class="tool-tag">Claude AI</span>
+            <span class="tool-tag">Formula Logic</span>
+          </div>
+          <a href="#" class="project-link">View →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <div class="project-thumb-placeholder">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>Dashboard coming soon</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">Supply Chain & Finance</div>
+        <h3 class="project-title">Clinical Supply Chain Optimization</h3>
+        <p class="project-desc">An end-to-end cost analysis of clinical supplies and outsourced services across the practice, identifying pricing inefficiencies and implementing corrective actions that generated $100,000+ in annual savings.</p>
+        <div class="project-footer">
+          <div class="project-tools">
+            <span class="tool-tag">Excel</span>
+            <span class="tool-tag">Claude AI</span>
+            <span class="tool-tag">Vendor Analysis</span>
+          </div>
+          <a href="#" class="project-link">View →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Experience</div>
+  <h2 class="section-title">Where I've built<br>my foundation.</h2>
+  <div class="experience-list">
+
+    <div class="exp-item">
+      <div class="exp-date">Dec 2025 — Present</div>
+      <div>
+        <div class="exp-role">Director of Operations</div>
+        <div class="exp-org">Retina and Vitreous Surgeons of Utah</div>
+        <ul class="exp-bullets">
+          <li>Directed operations across 4 retina clinics and 3 rural outreach sites, supporting 20–25 staff and 1,000+ monthly patient visits</li>
+          <li>Identified pricing inefficiencies through end-to-end cost analysis, generating $100,000+ in annual savings</li>
+          <li>Led in-house transition of marketing and digital strategy, reducing monthly expenses by $1,000+ while increasing web traffic 40%</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Jan 2026 — Present</div>
+      <div>
+        <div class="exp-role">Continuous Improvement Intern</div>
+        <div class="exp-org">Intermountain Health</div>
+        <ul class="exp-bullets">
+          <li>Redesigned referral intake workflows for a neurology service line supporting 9 providers, eliminating a backlog of 100+ unaddressed referrals</li>
+          <li>Partnered with patient safety leadership across 3+ hospitals to evaluate Patient Safety Monitor utilization and drive system-wide standardization</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Sep 2024 — Nov 2025</div>
+      <div>
+        <div class="exp-role">Clinic Operations Associate</div>
+        <div class="exp-org">Retina and Vitreous Surgeons of Utah</div>
+        <ul class="exp-bullets">
+          <li>Negotiated insurance reimbursement contracts generating $50,000+ in annual savings and preventing 200+ MIPS-related penalties</li>
+          <li>Designed standardized training and onboarding for 20+ clinical staff across multiple clinic sites</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Aug 2023 — Aug 2024</div>
+      <div>
+        <div class="exp-role">Medical Assistant Coordinator</div>
+        <div class="exp-org">Retina and Vitreous Surgeons of Utah</div>
+        <ul class="exp-bullets">
+          <li>Directed 15+ medical assistants, integrating staffing, triage, and charting systems across 10,000+ annual patient encounters</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-bottom: 6rem;">
+  <div class="contact-inner">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's connect.</h2>
+    <p class="section-sub">Whether you're looking to collaborate, discuss an opportunity, or just talk healthcare operations and analytics — I'd love to hear from you.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/grantdallincox" class="contact-link" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:gdallincox@gmail.com" class="contact-link">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        gdallincox@gmail.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Grant Dallin Cox · Built with intention.</p>
+</footer>
+
+</body>
+</html>
