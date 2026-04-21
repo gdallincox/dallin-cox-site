@@ -1470,6 +1470,230 @@
     flex-shrink: 0;
   }
 
+  /* ===== IN-FRAME MOCK UI v3 (closer to real) ===== */
+
+  /* Scheduler: analytics laptop + clock-in phone */
+  .mock-s3 {
+    flex: 1;
+    background: #ffffff;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'DM Sans', sans-serif;
+    overflow: hidden;
+  }
+  .mock-s3.phone {
+    padding: 0 8px 8px;
+    background: #ffffff;
+  }
+  .mock-s3-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .mock-s3-top .mock-logo {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .mock-s3-top h3 {
+    color: #166534;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+  }
+  .mock-s3-top .sub {
+    color: #64748b;
+    font-size: 6.5px;
+    margin-top: 1px;
+  }
+  .mock-s3-avatar {
+    margin-left: auto;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22c55e, #166534);
+  }
+  .mock-s3-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+  .mock-s3-tile {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-top: 2px solid #166534;
+    border-radius: 4px;
+    padding: 6px 7px 5px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .mock-s3-tile .val {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f1f3d;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .mock-s3-tile .val.green { color: #166534; }
+  .mock-s3-tile .lbl {
+    font-size: 5.2px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 3px;
+    font-weight: 600;
+  }
+  .mock-s3-chart {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 6px 8px 4px;
+  }
+  .mock-s3-chart .chart-title {
+    color: #166534;
+    font-size: 7.5px;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .mock-s3-chart .chart-svg {
+    width: 100%;
+    height: 46px;
+    display: block;
+  }
+  .mock-s3-chart .chart-x {
+    display: flex;
+    justify-content: space-between;
+    font-size: 5px;
+    color: #64748b;
+    margin-top: 2px;
+  }
+
+  /* Scheduler phone: clock-in */
+  .mock-s3-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+    background: #ffffff;
+  }
+  .mock-s3-card .t-title {
+    font-size: 8px;
+    font-weight: 700;
+    color: #0f1f3d;
+  }
+  .mock-s3-card .t-sub {
+    font-size: 6px;
+    color: #64748b;
+    margin: 2px 0 6px;
+  }
+  .mock-s3-card .clock-big {
+    background: #16a34a;
+    color: #ffffff;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+  }
+  .mock-s3-card .t-help {
+    font-size: 5.5px;
+    color: #94a3b8;
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+  .mock-s3-hourgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+  .mock-s3-hourgrid .hourcard {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    padding: 5px 6px;
+    text-align: center;
+  }
+  .mock-s3-hourgrid .ht {
+    font-size: 5.2px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .mock-s3-hourgrid .hv {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f1f3d;
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  .mock-s3-hourgrid .hbar {
+    height: 2px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .mock-s3-hourgrid .hfill {
+    height: 100%;
+    background: #dc2626;
+    border-radius: 2px;
+  }
+
+  /* Survey patient-landing phone */
+  .mock-v3 {
+    flex: 1;
+    background: #f5f1ea;
+    padding: 14px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'DM Sans', sans-serif;
+    overflow: hidden;
+  }
+  .mock-v3-brand {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+  .mock-v3-brand svg { width: 14px; height: 14px; }
+  .mock-v3-brand span {
+    color: #166534;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  .mock-v3-label {
+    font-size: 5.5px;
+    letter-spacing: 0.14em;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .mock-v3-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    line-height: 0.98;
+    color: #0f1f3d;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+  }
+  .mock-v3-sub {
+    font-family: 'DM Serif Display', serif;
+    font-size: 9px;
+    color: #3b5577;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .mock-v3-body {
+    font-size: 6.5px;
+    color: #334155;
+    line-height: 1.5;
+  }
+
   /* Existing project card polish */
   .project-card { position: relative; }
   .project-card::before {
@@ -1730,38 +1954,49 @@
       <div class="featured-visual">
         <div class="device-laptop" aria-hidden="true">
           <div class="device-laptop-screen">
-            <div class="mock-s2">
-              <div class="mock-s2-nav">
-                <div class="brand"><span class="brand-dot"></span>RVSU Scheduler</div>
-                <div class="links"><span>Dashboard</span><span>Schedule</span><span>Requests</span></div>
-                <div class="avatar"></div>
-              </div>
-              <div class="mock-s2-body">
-                <div class="mock-s2-card">
-                  <h4>Announcements</h4>
-                  <div class="mock-s2-alert ok">
-                    <strong>Q2 Staff Meeting — April 22</strong>
-                    <p>All-hands Tuesday at 8:00 AM in the SLC conference room.</p>
-                  </div>
-                  <div class="mock-s2-alert urgent">
-                    <strong>Roosevelt Rotation <span class="badge">Urgent</span></strong>
-                    <p>May 7 rotation still needs one backup.</p>
-                  </div>
+            <div class="mock-s3">
+              <div class="mock-s3-top">
+                <svg class="mock-logo" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="#166534" stroke-width="1.4"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="#166534" stroke-width="1.4"/><circle cx="12" cy="12" r="1.8" fill="#166534"/></svg>
+                <div>
+                  <h3>Analytics &amp; Reporting</h3>
+                  <div class="sub">Sample data — read-only</div>
                 </div>
-                <div class="mock-s2-card">
-                  <h4>Quick Actions</h4>
-                  <div class="mock-s2-btns">
-                    <div class="mock-s2-btn primary">View Schedule</div>
-                    <div class="mock-s2-btn">Requests (2)</div>
-                    <div class="mock-s2-btn">Rural</div>
-                    <div class="mock-s2-btn">Hours</div>
-                  </div>
-                  <h4 style="margin-top:2px;">Generate Schedule</h4>
-                  <div class="mock-s2-row">
-                    <div class="mock-s2-select">Apr</div>
-                    <div class="mock-s2-select">2026</div>
-                    <div class="mock-s2-btn primary" style="padding:3px 6px;">Generate</div>
-                  </div>
+                <div class="mock-s3-avatar"></div>
+              </div>
+              <div class="mock-s3-tiles">
+                <div class="mock-s3-tile">
+                  <div class="val">20</div>
+                  <div class="lbl">Active MAs</div>
+                </div>
+                <div class="mock-s3-tile">
+                  <div class="val">87%</div>
+                  <div class="lbl">Avg utilisation</div>
+                </div>
+                <div class="mock-s3-tile">
+                  <div class="val green">98%</div>
+                  <div class="lbl">Coverage rate</div>
+                </div>
+                <div class="mock-s3-tile">
+                  <div class="val">3120h</div>
+                  <div class="lbl">Total hours</div>
+                </div>
+              </div>
+              <div class="mock-s3-chart">
+                <div class="chart-title">MA Utilisation Rate (6-month)</div>
+                <svg viewBox="0 0 200 60" preserveAspectRatio="none" class="chart-svg">
+                  <path d="M0,42 L40,38 L80,34 L120,30 L160,26 L200,20 L200,60 L0,60 Z" fill="#dcfce7" opacity="0.7"/>
+                  <path d="M0,42 L40,38 L80,34 L120,30 L160,26 L200,20" fill="none" stroke="#166534" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <g fill="#166534">
+                    <circle cx="0" cy="42" r="1.6"/>
+                    <circle cx="40" cy="38" r="1.6"/>
+                    <circle cx="80" cy="34" r="1.6"/>
+                    <circle cx="120" cy="30" r="1.6"/>
+                    <circle cx="160" cy="26" r="1.6"/>
+                    <circle cx="200" cy="20" r="1.6"/>
+                  </g>
+                </svg>
+                <div class="chart-x">
+                  <span>Nov/25</span><span>Dec/25</span><span>Jan/26</span><span>Feb/26</span><span>Mar/26</span><span>Apr/26</span>
                 </div>
               </div>
             </div>
@@ -1769,24 +2004,23 @@
         </div>
         <div class="device-phone" aria-hidden="true">
           <div class="device-phone-screen">
-            <div class="mock-s2 phone">
-              <div style="height:16px;"></div>
-              <div class="mock-s2-card">
-                <h4>Announcements</h4>
-                <div class="mock-s2-alert ok">
-                  <strong>Q2 Staff Meeting</strong>
-                  <p>Tue Apr 22, 8 AM · SLC</p>
-                </div>
-                <div class="mock-s2-alert urgent">
-                  <strong>Roosevelt <span class="badge">Urgent</span></strong>
-                  <p>May 7 needs backup</p>
-                </div>
+            <div class="mock-s3 phone">
+              <div style="height:14px;"></div>
+              <div class="mock-s3-card">
+                <div class="t-title">Time Clock</div>
+                <div class="t-sub">You are currently clocked out.</div>
+                <div class="clock-big">CLOCK IN</div>
+                <div class="t-help">GPS-verified within 300 m of any clinic.</div>
               </div>
-              <div class="mock-s2-card">
-                <h4>Quick Actions</h4>
-                <div class="mock-s2-btns">
-                  <div class="mock-s2-btn primary">View Schedule</div>
-                  <div class="mock-s2-btn">Requests (2)</div>
+              <div class="mock-s3-hourgrid">
+                <div class="hourcard">
+                  <div class="ht">This week</div>
+                  <div class="hv">32h</div>
+                  <div class="hbar"><div class="hfill" style="width:80%"></div></div>
+                </div>
+                <div class="hourcard">
+                  <div class="ht">Apr</div>
+                  <div class="hv">128h</div>
                 </div>
               </div>
             </div>
@@ -1844,17 +2078,16 @@
         </div>
         <div class="device-phone" aria-hidden="true">
           <div class="device-phone-screen">
-            <div class="mock-v2 phone">
+            <div class="mock-v3 phone">
               <div style="height:14px;"></div>
-              <div class="mock-v2-label">CHART</div>
-              <div class="mock-v2-title" style="font-size:11px;">Topic breakdown</div>
-              <div class="mock-v2-rows" style="margin-top:4px;">
-                <div class="mock-v2-row"><span class="lbl">wait time</span><div class="bar" style="width:90%"></div><span class="val">38</span></div>
-                <div class="mock-v2-row"><span class="lbl">provider</span><div class="bar" style="width:72%"></div><span class="val">31</span></div>
-                <div class="mock-v2-row"><span class="lbl">staff</span><div class="bar" style="width:60%"></div><span class="val">27</span></div>
-                <div class="mock-v2-row"><span class="lbl">scheduling</span><div class="bar" style="width:42%"></div><span class="val">19</span></div>
-                <div class="mock-v2-row"><span class="lbl">facility</span><div class="bar" style="width:32%"></div><span class="val">14</span></div>
+              <div class="mock-v3-brand">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="#166534" stroke-width="1.4"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="#166534" stroke-width="1.4"/><circle cx="12" cy="12" r="1.8" fill="#166534"/></svg>
+                <span>RVSU</span>
               </div>
+              <div class="mock-v3-label">A NOTE TO OUR PATIENTS</div>
+              <div class="mock-v3-title">Patient feedback.</div>
+              <div class="mock-v3-sub">Honest, anonymous, used to improve care.</div>
+              <div class="mock-v3-body">A short anonymous survey — no names, no logins, just a minute of feedback that informs how we operate.</div>
             </div>
           </div>
         </div>
