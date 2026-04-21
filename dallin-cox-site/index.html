@@ -1253,6 +1253,223 @@
     font-weight: 600;
   }
 
+  /* ===== IN-FRAME MOCK UI v2 (matches real sites) ===== */
+  /* Scheduler: green / card-based */
+  .mock-s2 {
+    flex: 1;
+    background: #f7f8fa;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'DM Sans', sans-serif;
+    overflow: hidden;
+  }
+  .mock-s2.phone {
+    padding: 0 8px 8px;
+    gap: 6px;
+    background: #f7f8fa;
+  }
+  .mock-s2-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .mock-s2-nav .brand {
+    color: #166534;
+    font-weight: 700;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .mock-s2-nav .brand-dot {
+    width: 8px; height: 8px;
+    background: #166534;
+    border-radius: 2px;
+  }
+  .mock-s2-nav .links {
+    display: flex;
+    gap: 8px;
+    color: #64748b;
+    font-size: 6.5px;
+  }
+  .mock-s2-nav .avatar {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22c55e, #166534);
+  }
+  .mock-s2-body {
+    flex: 1;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 6px;
+    overflow: hidden;
+  }
+  .mock-s2-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 7px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+  }
+  .mock-s2-card h4 {
+    color: #166534;
+    font-weight: 700;
+    font-size: 7.5px;
+    margin: 0;
+  }
+  .mock-s2-alert {
+    padding: 4px 5px 4px 6px;
+    border-left: 2px solid;
+    border-radius: 0 3px 3px 0;
+    line-height: 1.35;
+  }
+  .mock-s2-alert strong {
+    font-size: 6.5px;
+    font-weight: 700;
+    display: block;
+  }
+  .mock-s2-alert p {
+    margin: 1px 0 0;
+    font-size: 5.8px;
+    color: #334155;
+    font-weight: 400;
+  }
+  .mock-s2-alert.ok {
+    background: #ecfdf5;
+    border-color: #166534;
+  }
+  .mock-s2-alert.ok strong { color: #166534; }
+  .mock-s2-alert.urgent {
+    background: #fef2f2;
+    border-color: #dc2626;
+  }
+  .mock-s2-alert.urgent strong { color: #dc2626; }
+  .mock-s2-alert .badge {
+    display: inline-block;
+    background: #fecaca;
+    color: #b91c1c;
+    font-size: 5px;
+    padding: 1px 3px;
+    border-radius: 2px;
+    margin-left: 3px;
+    font-weight: 600;
+    vertical-align: middle;
+    letter-spacing: 0.03em;
+  }
+  .mock-s2-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+  .mock-s2-btn {
+    padding: 4px 5px;
+    border: 1px solid #166534;
+    color: #166534;
+    background: #ffffff;
+    border-radius: 3px;
+    font-size: 6px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mock-s2-btn.primary {
+    background: #166534;
+    color: #ffffff;
+    border-color: #166534;
+  }
+  .mock-s2-row {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .mock-s2-select {
+    flex: 1;
+    padding: 3px 4px;
+    border: 1px solid #cbd5e1;
+    border-radius: 3px;
+    font-size: 6px;
+    color: #0f1f3d;
+    background: #ffffff;
+    text-align: left;
+  }
+
+  /* Survey: cream / navy bars / serif */
+  .mock-v2 {
+    flex: 1;
+    background: #f5f1ea;
+    padding: 14px 14px 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'DM Sans', sans-serif;
+    overflow: hidden;
+  }
+  .mock-v2.phone {
+    padding: 0 10px 8px;
+    background: #f5f1ea;
+  }
+  .mock-v2-label {
+    font-size: 6px;
+    letter-spacing: 0.14em;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .mock-v2-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #0f1f3d;
+    letter-spacing: -0.02em;
+    margin-bottom: 3px;
+  }
+  .mock-v2-sub {
+    font-size: 5.5px;
+    color: #64748b;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    max-width: 92%;
+  }
+  .mock-v2-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .mock-v2-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 6.5px;
+  }
+  .mock-v2-row .lbl {
+    width: 54px;
+    color: #0f1f3d;
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .mock-v2.phone .mock-v2-row .lbl { width: 42px; }
+  .mock-v2-row .bar {
+    height: 6px;
+    background: #0f1f3d;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+  .mock-v2-row .val {
+    margin-left: auto;
+    color: #64748b;
+    font-size: 6px;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+
   /* Existing project card polish */
   .project-card { position: relative; }
   .project-card::before {
@@ -1513,66 +1730,65 @@
       <div class="featured-visual">
         <div class="device-laptop" aria-hidden="true">
           <div class="device-laptop-screen">
-            <div class="mock-sched-top">
-              <div class="logo"><span class="logo-dot"></span> RVSU Scheduler</div>
-              <div style="color:var(--text-muted); font-size:8px;">Week of Mar 10</div>
-              <div class="avatar"></div>
-            </div>
-            <div class="mock-sched-body">
-              <div class="cell"></div>
-              <div class="cell header">Mon</div>
-              <div class="cell header">Tue</div>
-              <div class="cell header">Wed</div>
-              <div class="cell header">Thu</div>
-              <div class="cell header">Fri</div>
-              <div class="cell header">Sat</div>
-
-              <div class="cell name">Ana R.</div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block teal">OR</div></div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block gray">OFF</div></div>
-              <div class="cell"></div>
-
-              <div class="cell name">Marco C.</div>
-              <div class="cell"><div class="block amber">Provo</div></div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block rose">PTO</div></div>
-              <div class="cell"><div class="block rose">PTO</div></div>
-              <div class="cell"></div>
-
-              <div class="cell name">Jada H.</div>
-              <div class="cell"><div class="block teal">OR</div></div>
-              <div class="cell"><div class="block amber">Provo</div></div>
-              <div class="cell"><div class="block amber">Provo</div></div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block gray">OFF</div></div>
-
-              <div class="cell name">Sam K.</div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block gray">OFF</div></div>
-              <div class="cell"><div class="block blue">8–5 SLC</div></div>
-              <div class="cell"><div class="block amber">Provo</div></div>
-              <div class="cell"><div class="block teal">OR</div></div>
-              <div class="cell"><div class="block blue">½ day</div></div>
+            <div class="mock-s2">
+              <div class="mock-s2-nav">
+                <div class="brand"><span class="brand-dot"></span>RVSU Scheduler</div>
+                <div class="links"><span>Dashboard</span><span>Schedule</span><span>Requests</span></div>
+                <div class="avatar"></div>
+              </div>
+              <div class="mock-s2-body">
+                <div class="mock-s2-card">
+                  <h4>Announcements</h4>
+                  <div class="mock-s2-alert ok">
+                    <strong>Q2 Staff Meeting — April 22</strong>
+                    <p>All-hands Tuesday at 8:00 AM in the SLC conference room.</p>
+                  </div>
+                  <div class="mock-s2-alert urgent">
+                    <strong>Roosevelt Rotation <span class="badge">Urgent</span></strong>
+                    <p>May 7 rotation still needs one backup.</p>
+                  </div>
+                </div>
+                <div class="mock-s2-card">
+                  <h4>Quick Actions</h4>
+                  <div class="mock-s2-btns">
+                    <div class="mock-s2-btn primary">View Schedule</div>
+                    <div class="mock-s2-btn">Requests (2)</div>
+                    <div class="mock-s2-btn">Rural</div>
+                    <div class="mock-s2-btn">Hours</div>
+                  </div>
+                  <h4 style="margin-top:2px;">Generate Schedule</h4>
+                  <div class="mock-s2-row">
+                    <div class="mock-s2-select">Apr</div>
+                    <div class="mock-s2-select">2026</div>
+                    <div class="mock-s2-btn primary" style="padding:3px 6px;">Generate</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="device-phone" aria-hidden="true">
           <div class="device-phone-screen">
-            <div class="mock-phone-sched">
-              <div class="title">Clock in</div>
-              <div class="sub">Thursday, 7:58 AM</div>
-              <div class="loc-card">
-                <div class="loc-row"><span class="loc-dot"></span> On-site verified</div>
-                <div class="loc-row" style="color:var(--text-muted); font-size:7px;">RVSU — Sandy Clinic</div>
+            <div class="mock-s2 phone">
+              <div style="height:16px;"></div>
+              <div class="mock-s2-card">
+                <h4>Announcements</h4>
+                <div class="mock-s2-alert ok">
+                  <strong>Q2 Staff Meeting</strong>
+                  <p>Tue Apr 22, 8 AM · SLC</p>
+                </div>
+                <div class="mock-s2-alert urgent">
+                  <strong>Roosevelt <span class="badge">Urgent</span></strong>
+                  <p>May 7 needs backup</p>
+                </div>
               </div>
-              <div class="clock-btn">Clock In</div>
-              <div class="shift-row"><span>Today's shift</span><strong>8:00 – 5:00</strong></div>
-              <div class="shift-row"><span>Break</span><strong>30 min</strong></div>
+              <div class="mock-s2-card">
+                <h4>Quick Actions</h4>
+                <div class="mock-s2-btns">
+                  <div class="mock-s2-btn primary">View Schedule</div>
+                  <div class="mock-s2-btn">Requests (2)</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1610,55 +1826,35 @@
       <div class="featured-visual">
         <div class="device-laptop" aria-hidden="true">
           <div class="device-laptop-screen">
-            <div class="mock-survey-top">
-              <div class="logo"><span class="logo-dot"></span> RVSU Insights</div>
-              <div style="color:var(--text-muted); font-size:8px;">Last 30 days</div>
-              <div style="width:14px; height:14px; border-radius:50%; background:linear-gradient(135deg, #10b981, #0f766e);"></div>
-            </div>
-            <div class="mock-survey-body">
-              <div class="kpi">
-                <div class="label">Net Promoter</div>
-                <div class="value">72</div>
-                <div class="delta">▲ 6 vs prior</div>
-              </div>
-              <div class="kpi">
-                <div class="label">CSAT</div>
-                <div class="value">94%</div>
-                <div class="delta">▲ 2.1 pts</div>
-              </div>
-              <div class="chart">
-                <div class="bar" style="height:30%"></div>
-                <div class="bar" style="height:48%"></div>
-                <div class="bar" style="height:40%"></div>
-                <div class="bar" style="height:62%"></div>
-                <div class="bar" style="height:55%"></div>
-                <div class="bar" style="height:78%"></div>
-                <div class="bar" style="height:70%"></div>
-                <div class="bar" style="height:88%"></div>
-                <div class="bar" style="height:82%"></div>
-                <div class="bar" style="height:95%"></div>
+            <div class="mock-v2">
+              <div class="mock-v2-label">CHART</div>
+              <div class="mock-v2-title">Topic breakdown</div>
+              <div class="mock-v2-sub">Last 30 days. Bar length is volume; sigil at right shows net sentiment.</div>
+              <div class="mock-v2-rows">
+                <div class="mock-v2-row"><span class="lbl">wait time</span><div class="bar" style="width:96%"></div><span class="val">38 −</span></div>
+                <div class="mock-v2-row"><span class="lbl">provider comm</span><div class="bar" style="width:78%"></div><span class="val">31 +</span></div>
+                <div class="mock-v2-row"><span class="lbl">staff friendliness</span><div class="bar" style="width:68%"></div><span class="val">27 +</span></div>
+                <div class="mock-v2-row"><span class="lbl">scheduling</span><div class="bar" style="width:48%"></div><span class="val">19 −</span></div>
+                <div class="mock-v2-row"><span class="lbl">facility</span><div class="bar" style="width:36%"></div><span class="val">14 +</span></div>
+                <div class="mock-v2-row"><span class="lbl">intake</span><div class="bar" style="width:30%"></div><span class="val">12 −</span></div>
+                <div class="mock-v2-row"><span class="lbl">billing</span><div class="bar" style="width:22%"></div><span class="val">9 −</span></div>
               </div>
             </div>
           </div>
         </div>
         <div class="device-phone" aria-hidden="true">
           <div class="device-phone-screen">
-            <div class="mock-phone-survey">
-              <div class="q">How was your visit today?</div>
-              <div class="smileys">
-                <div class="smiley">😕</div>
-                <div class="smiley">😐</div>
-                <div class="smiley">🙂</div>
-                <div class="smiley active">😊</div>
-                <div class="smiley">🤩</div>
+            <div class="mock-v2 phone">
+              <div style="height:14px;"></div>
+              <div class="mock-v2-label">CHART</div>
+              <div class="mock-v2-title" style="font-size:11px;">Topic breakdown</div>
+              <div class="mock-v2-rows" style="margin-top:4px;">
+                <div class="mock-v2-row"><span class="lbl">wait time</span><div class="bar" style="width:90%"></div><span class="val">38</span></div>
+                <div class="mock-v2-row"><span class="lbl">provider</span><div class="bar" style="width:72%"></div><span class="val">31</span></div>
+                <div class="mock-v2-row"><span class="lbl">staff</span><div class="bar" style="width:60%"></div><span class="val">27</span></div>
+                <div class="mock-v2-row"><span class="lbl">scheduling</span><div class="bar" style="width:42%"></div><span class="val">19</span></div>
+                <div class="mock-v2-row"><span class="lbl">facility</span><div class="bar" style="width:32%"></div><span class="val">14</span></div>
               </div>
-              <div style="font-size:7px; color:var(--text-muted); margin-top:4px;">Tap to rate</div>
-              <div class="progress">
-                <div class="dot on"></div>
-                <div class="dot on"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="next">Next →</div>
             </div>
           </div>
         </div>
