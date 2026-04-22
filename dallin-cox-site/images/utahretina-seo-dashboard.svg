@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="SEO Program dashboard for Utah Retina: Core Web Vitals 100 desktop and 95 mobile, 36-page audit scope, 107 live backlinks across 130 placements, 229 directory citations, and 16-topic content pipeline with 4 of 16 service pages launched.">
+  <defs>
+    <filter id="panelShadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="3"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="pageBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="mintArc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1400" height="900" fill="url(#pageBg)"/>
+
+  <!-- Main app card -->
+  <g transform="translate(40, 40)">
+    <rect width="1320" height="820" rx="14" fill="#ffffff" filter="url(#panelShadow)"/>
+
+    <!-- Header -->
+    <g>
+      <rect x="0" y="0" width="1320" height="64" rx="14" fill="#ffffff"/>
+      <rect x="0" y="50" width="1320" height="14" fill="#ffffff"/>
+      <line x1="0" y1="64" x2="1320" y2="64" stroke="#e2e8f0"/>
+      <rect x="24" y="22" width="10" height="20" rx="2" fill="#2563eb"/>
+      <text x="42" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f1f3d" letter-spacing="1.5">SEO PROGRAM</text>
+      <text x="180" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500" fill="#64748b">Utah Retina</text>
+      <text x="1296" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#94a3b8" text-anchor="end">Q2 2026 &#8226; In Progress</text>
+    </g>
+
+    <!-- Section 1: Core Web Vitals -->
+    <g transform="translate(32, 92)">
+      <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="2" fill="#94a3b8" font-weight="700">CORE WEB VITALS</text>
+
+      <!-- Desktop gauge card -->
+      <g transform="translate(0, 32)">
+        <rect width="616" height="220" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+        <text x="32" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" letter-spacing="1.5" fill="#64748b" font-weight="600">DESKTOP</text>
+
+        <!-- Gauge -->
+        <g transform="translate(160, 110)">
+          <circle cx="0" cy="0" r="70" fill="none" stroke="#e2e8f0" stroke-width="10"/>
+          <circle cx="0" cy="0" r="70" fill="none" stroke="url(#mintArc)" stroke-width="10" stroke-dasharray="439.82 439.82" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90)"/>
+          <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="42" font-weight="700" fill="#0f1f3d" text-anchor="middle">100</text>
+        </g>
+
+        <!-- Details -->
+        <g transform="translate(300, 65)">
+          <rect x="0" y="0" width="68" height="20" rx="10" fill="#dcfce7"/>
+          <circle cx="11" cy="10" r="3" fill="#10b981"/>
+          <text x="22" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" fill="#065f46" font-weight="700" letter-spacing="0.5">PERFECT</text>
+
+          <g transform="translate(0, 36)">
+            <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="20" fill="#0f1f3d" font-weight="600">All metrics in the green</text>
+            <text y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#64748b">LCP &#8226; CLS &#8226; INP &#8226; FCP &#8226; TTFB</text>
+          </g>
+          <g transform="translate(0, 100)">
+            <rect width="270" height="36" rx="6" fill="#f8fafc"/>
+            <text x="14" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b">Measured via</text>
+            <text x="110" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#0f1f3d" font-weight="600">Google PageSpeed Insights</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Mobile gauge card -->
+      <g transform="translate(640, 32)">
+        <rect width="616" height="220" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+        <text x="32" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" letter-spacing="1.5" fill="#64748b" font-weight="600">MOBILE</text>
+
+        <g transform="translate(160, 110)">
+          <circle cx="0" cy="0" r="70" fill="none" stroke="#e2e8f0" stroke-width="10"/>
+          <circle cx="0" cy="0" r="70" fill="none" stroke="url(#mintArc)" stroke-width="10" stroke-dasharray="417.83 439.82" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90)"/>
+          <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="42" font-weight="700" fill="#0f1f3d" text-anchor="middle">95</text>
+        </g>
+
+        <g transform="translate(300, 65)">
+          <rect x="0" y="0" width="68" height="20" rx="10" fill="#dcfce7"/>
+          <circle cx="11" cy="10" r="3" fill="#10b981"/>
+          <text x="22" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" fill="#065f46" font-weight="700" letter-spacing="0.5">PASSING</text>
+
+          <g transform="translate(0, 36)">
+            <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="20" fill="#0f1f3d" font-weight="600">Strong on real-user data</text>
+            <text y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#64748b">Across iOS + Android devices</text>
+          </g>
+          <g transform="translate(0, 100)">
+            <rect width="270" height="36" rx="6" fill="#f8fafc"/>
+            <text x="14" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b">Up from</text>
+            <text x="62" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#0f1f3d" font-weight="600">baseline at engagement start</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Section 2: On-page scope -->
+    <g transform="translate(32, 360)">
+      <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="2" fill="#94a3b8" font-weight="700">ON-PAGE AUDIT &amp; REMEDIATION</text>
+
+      <g transform="translate(0, 32)">
+        <!-- 36 pages -->
+        <g>
+          <rect width="304" height="110" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+          <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="1.5" fill="#94a3b8" font-weight="600">PAGES AUDITED</text>
+          <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="700" fill="#0f1f3d">36</text>
+          <text x="20" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">Meta titles &amp; descriptions rewritten</text>
+        </g>
+
+        <!-- 33 H1s -->
+        <g transform="translate(320, 0)">
+          <rect width="304" height="110" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+          <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="1.5" fill="#94a3b8" font-weight="600">H1 TAGS STANDARDIZED</text>
+          <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="700" fill="#0f1f3d">33</text>
+          <text x="20" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">One per page, keyword-aligned</text>
+        </g>
+
+        <!-- 49 alt texts -->
+        <g transform="translate(640, 0)">
+          <rect width="304" height="110" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+          <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="1.5" fill="#94a3b8" font-weight="600">IMAGE ALT-TEXTS</text>
+          <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="700" fill="#0f1f3d">49</text>
+          <text x="20" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">Accessibility + indexability win</text>
+        </g>
+
+        <!-- 14-point audit -->
+        <g transform="translate(960, 0)">
+          <rect width="296" height="110" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+          <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="1.5" fill="#94a3b8" font-weight="600">TECHNICAL AUDIT</text>
+          <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="700" fill="#0f1f3d">14-pt</text>
+          <text x="20" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">Schema, speed, indexation, crawl</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Section 3: Off-page authority + pipeline -->
+    <g transform="translate(32, 548)">
+      <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="2" fill="#94a3b8" font-weight="700">OFF-PAGE AUTHORITY &amp; CONTENT PIPELINE</text>
+
+      <!-- Backlinks card with sparkline -->
+      <g transform="translate(0, 32)">
+        <rect width="616" height="218" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+        <text x="24" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" letter-spacing="1.5" fill="#64748b" font-weight="600">BACKLINKS</text>
+
+        <g transform="translate(24, 58)">
+          <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="40" font-weight="700" fill="#0f1f3d">107</text>
+          <text x="88" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#10b981" font-weight="600">live</text>
+          <text x="88" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">of 130 placements</text>
+        </g>
+
+        <!-- Sparkline -->
+        <g transform="translate(24, 130)">
+          <polyline points="0,60 50,55 100,50 150,44 200,40 250,32 300,28 350,22 400,18 450,12 500,6 560,0" stroke="#2563eb" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="0,60 50,55 100,50 150,44 200,40 250,32 300,28 350,22 400,18 450,12 500,6 560,0 560,70 0,70" fill="#2563eb" fill-opacity="0.08"/>
+
+          <!-- x-axis labels -->
+          <text x="0" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" fill="#94a3b8">Month 1</text>
+          <text x="280" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Month 3</text>
+          <text x="560" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="end">Today</text>
+        </g>
+      </g>
+
+      <!-- Directory + Pipeline stacked -->
+      <g transform="translate(640, 32)">
+        <!-- Directory citations -->
+        <g>
+          <rect width="616" height="100" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+          <text x="24" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="1.5" fill="#94a3b8" font-weight="600">DIRECTORY CITATIONS</text>
+          <g transform="translate(24, 58)">
+            <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" fill="#0f1f3d">229</text>
+            <text x="70" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">citations across practice GMB profiles</text>
+            <text x="70" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">+ 132 supporting profiles for topical authority</text>
+          </g>
+        </g>
+
+        <!-- Content pipeline -->
+        <g transform="translate(0, 118)">
+          <rect width="616" height="100" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+          <text x="24" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="10" letter-spacing="1.5" fill="#94a3b8" font-weight="600">CONTENT &amp; SERVICE PAGES</text>
+          <g transform="translate(24, 48)">
+            <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="15" fill="#0f1f3d" font-weight="600">4 of 16 service-line pages launched</text>
+            <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b">16-topic editorial pipeline seeded for ongoing content</text>
+          </g>
+          <!-- Progress bar: 4/16 = 25% -->
+          <g transform="translate(404, 50)">
+            <rect width="188" height="8" rx="4" fill="#eff4ff"/>
+            <rect width="47" height="8" rx="4" fill="#2563eb"/>
+            <text x="188" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="end">4 / 16 &#8226; 25% shipped</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Footer note -->
+    <g transform="translate(32, 790)">
+      <line x1="0" y1="0" x2="1256" y2="0" stroke="#e2e8f0"/>
+      <text y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#94a3b8">Directed in-house by Dallin Cox &#8226; Execution by contracted SEO specialists &#8226; Ongoing program, metrics live as of Q2 2026</text>
+    </g>
+  </g>
+</svg>
