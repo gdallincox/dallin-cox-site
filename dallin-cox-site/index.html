@@ -1038,9 +1038,8 @@
   }
   .featured-feats {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem 1rem;
+    columns: 2;
+    column-gap: 1rem;
     margin-bottom: 2rem;
   }
   .featured-feats li {
@@ -1049,6 +1048,8 @@
     padding-left: 20px;
     position: relative;
     line-height: 1.5;
+    break-inside: avoid;
+    margin-bottom: 0.5rem;
   }
   .featured-feats li::before {
     content: '';
@@ -1921,7 +1922,7 @@
     .featured-card.reverse .featured-visual { order: 0; }
     .featured-visual { min-height: 300px; }
     .device-laptop { max-width: 380px; }
-    .featured-feats { grid-template-columns: 1fr; }
+    .featured-feats { columns: 1; }
   }
   @media (max-width: 520px) {
     .featured-card { padding: 1.5rem 1.25rem; border-radius: 18px; }
@@ -2297,13 +2298,14 @@
         <div class="featured-status">Live</div>
         <div class="project-tag">Website Redesign &amp; SEO</div>
         <h3 class="featured-title">Utah Retina — Website redesign, SEO, and in-house ownership.</h3>
-        <div class="featured-url">utahretina.com</div>
+        <div class="featured-url">Technical SEO · On-page remediation · Content strategy · Off-page authority</div>
         <p class="featured-desc">A full website rebuild and SEO program for a multi-location retina practice. Led the in-house transition from an external vendor and oversaw the execution team: top-to-bottom site audit, technical SEO remediation, service-line page expansion, an editorial content pipeline, directory-citation management, and ongoing off-page authority work. Laptop shows a redacted results dashboard; phone is a real service page with only the logo and headline blurred so the redesigned design system reads clearly.</p>
         <ul class="featured-feats">
           <li>36-page site audit with meta rewrites and 14-point technical SEO review</li>
           <li>33 H1 tags standardized; 49 image alt-texts audited or added</li>
           <li>Core Web Vitals: 100 desktop / 95 mobile</li>
-          <li>4 of 16 new service-line pages launched: Laser Photocoagulation, Diabetic Retinopathy Treatment, Retinal Tear Treatment, Emergency Retina Care</li>
+          <li>4 of 16 new service-line pages launched</li>
+          <li>Pages live: Laser Photocoagulation, Diabetic Retinopathy, Retinal Tear, Emergency Retina Care</li>
           <li>16-topic editorial pipeline seeded for ongoing content</li>
           <li>107 live backlinks across 130 placements</li>
           <li>229 directory citations across practice GMB profiles</li>
