@@ -2030,53 +2030,84 @@
       </div>
     </article>
 
-  </div>
-
-  <div class="projects-grid">
-
-    <div class="project-card reveal">
-      <div class="project-thumb">
-        <div class="project-thumb-placeholder">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Dashboard coming soon</span>
-        </div>
-      </div>
-      <div class="project-body">
+    <!-- Utah Retina Patient Growth Analysis -->
+    <article class="featured-card reveal">
+      <div class="featured-content">
+        <div class="featured-status">Redacted case study</div>
         <div class="project-tag">Geographic Strategy</div>
-        <h3 class="project-title">Utah Retina Patient Growth Analysis</h3>
-        <p class="project-desc">A statewide geographic analysis of 12 months of patient visit data across 355 ZIP codes, identifying underserved markets and expansion opportunities — including a Sanpete/Sevier Corridor opportunity with no competing retina specialist.</p>
-        <div class="project-footer">
-          <div class="project-tools">
-            <span class="tool-tag">Tableau</span>
-            <span class="tool-tag">Claude AI</span>
-            <span class="tool-tag">Utah.gov Data</span>
-          </div>
-          <a href="#" class="project-link">View →</a>
+        <h3 class="featured-title">Utah Retina Patient Growth — Expansion strategy by geography.</h3>
+        <div class="featured-url">AdvancedMD · UPC · MAG · Gardner Institute</div>
+        <p class="featured-desc">A statewide geographic analysis combining 12 months of patient visit data with official Utah population projections through 2050 — built to answer one question: where should a growing surgical practice invest next, and why?</p>
+        <ul class="featured-feats">
+          <li>133,235 patient visits analyzed across 355 ZIP codes and 18 states</li>
+          <li>12-month trend window (Oct 2024 – Sep 2025)</li>
+          <li>Joined to Utah Population Committee, MAG &amp; Gardner Institute projections</li>
+          <li>Four-quadrant opportunity matrix: visit volume × projected growth</li>
+          <li>Competitive landscape mapped across 5 regional practices</li>
+          <li>City-level population projections through 2050</li>
+          <li>Kernel density heatmap built in Tableau; production model in Power BI</li>
+          <li>Five prioritized expansion recommendations delivered to leadership</li>
+        </ul>
+        <div class="featured-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">Tableau</span>
+          <span class="tool-tag">Utah.gov Data</span>
+          <span class="tool-tag">Geospatial Analysis</span>
         </div>
       </div>
-    </div>
+      <div class="featured-visual">
+        <div class="device-laptop" aria-hidden="true">
+          <div class="device-laptop-screen">
+            <img src="images/utah-patient-density.png" alt="Kernel density heatmap of patient visit volume across Utah. Specific values and markets redacted for competitive confidentiality.">
+          </div>
+        </div>
+        <div class="device-phone" aria-hidden="true">
+          <div class="device-phone-screen">
+            <img src="images/opportunity-matrix-redacted.svg" alt="Redacted opportunity matrix plotting visit volume against projected population growth. City labels withheld for competitive confidentiality.">
+          </div>
+        </div>
+      </div>
+    </article>
 
-    <div class="project-card reveal reveal-delay-1">
-      <div class="project-thumb">
-        <div class="project-thumb-placeholder">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          <span>Dashboard coming soon</span>
+    <!-- Clinical Supply Chain Platform -->
+    <article class="featured-card reverse reveal">
+      <div class="featured-content">
+        <div class="featured-status">In development</div>
+        <div class="project-tag">Supply Chain &amp; Operations</div>
+        <h3 class="featured-title">Clinical Supply Chain — Inventory, ordering &amp; forecast in one workflow.</h3>
+        <div class="featured-url">Daily counts · Threshold alerts · Predictive reorder</div>
+        <p class="featured-desc">A full-stack clinical inventory platform that replaces spreadsheet chaos with one workflow: daily counts per clinic, threshold-based reorder alerts, auto-generated vendor order emails, and predictive analytics that learn from order history to forecast supply spend across rolling horizons.</p>
+        <ul class="featured-feats">
+          <li>Daily per-clinic supply counts with one-tap "same as yesterday"</li>
+          <li>Item-level minimum thresholds with low-stock alerts</li>
+          <li>Auto-generated vendor order emails routed to purchasing</li>
+          <li>Live per-clinic inventory dashboard (Tableau / Power BI)</li>
+          <li>Central product catalog with vendor pricing &amp; lead times</li>
+          <li>Daily order-list generator: what to order, from whom, for which clinic</li>
+          <li>Reorder-cadence learning from 12+ months of order history</li>
+          <li>Projected supply spend forecasts: 30 / 90 / 180 / 365-day horizons</li>
+          <li>Prior engagement: $100,000+ annual savings from end-to-end cost analysis</li>
+        </ul>
+        <div class="featured-tools">
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">Tableau</span>
+          <span class="tool-tag">Predictive Analytics</span>
+          <span class="tool-tag">Email Automation</span>
         </div>
       </div>
-      <div class="project-body">
-        <div class="project-tag">Supply Chain & Finance</div>
-        <h3 class="project-title">Clinical Supply Chain Optimization</h3>
-        <p class="project-desc">An end-to-end cost analysis of clinical supplies and outsourced services across the practice, identifying pricing inefficiencies and implementing corrective actions that generated $100,000+ in annual savings.</p>
-        <div class="project-footer">
-          <div class="project-tools">
-            <span class="tool-tag">Excel</span>
-            <span class="tool-tag">Claude AI</span>
-            <span class="tool-tag">Vendor Analysis</span>
+      <div class="featured-visual">
+        <div class="device-laptop" aria-hidden="true">
+          <div class="device-laptop-screen">
+            <img src="images/supply-dashboard-mock.svg" alt="Concept mock of a clinical inventory dashboard showing per-clinic supply counts across Draper, Murray, Provo, and Payson with threshold warnings and a generate-order-email action.">
           </div>
-          <a href="#" class="project-link">View →</a>
+        </div>
+        <div class="device-phone" aria-hidden="true">
+          <div class="device-phone-screen">
+            <img src="images/supply-count-mobile-mock.svg" alt="Concept mock of the daily supply count entry screen on mobile, with stepper inputs and same-as-yesterday checkmarks.">
+          </div>
         </div>
       </div>
-    </div>
+    </article>
 
   </div>
 </section>
