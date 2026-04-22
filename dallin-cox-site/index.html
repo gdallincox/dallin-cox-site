@@ -960,6 +960,13 @@
     display: flex;
     flex-direction: column;
   }
+  .device-laptop-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+    display: block;
+  }
 
   /* ===== DEVICE: PHONE ===== */
   .device-phone {
@@ -986,6 +993,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
+  }
+  .device-phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
   }
   .device-phone-screen::before {
     content: '';
@@ -1959,76 +1973,12 @@
       <div class="featured-visual">
         <div class="device-laptop" aria-hidden="true">
           <div class="device-laptop-screen">
-            <div class="mock-s3">
-              <div class="mock-s3-top">
-                <svg class="mock-logo" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="#166534" stroke-width="1.4"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="#166534" stroke-width="1.4"/><circle cx="12" cy="12" r="1.8" fill="#166534"/></svg>
-                <div>
-                  <h3>Analytics &amp; Reporting</h3>
-                  <div class="sub">Sample data — read-only</div>
-                </div>
-                <div class="mock-s3-avatar"></div>
-              </div>
-              <div class="mock-s3-tiles">
-                <div class="mock-s3-tile">
-                  <div class="val">20</div>
-                  <div class="lbl">Active MAs</div>
-                </div>
-                <div class="mock-s3-tile">
-                  <div class="val">87%</div>
-                  <div class="lbl">Avg utilisation</div>
-                </div>
-                <div class="mock-s3-tile">
-                  <div class="val green">98%</div>
-                  <div class="lbl">Coverage rate</div>
-                </div>
-                <div class="mock-s3-tile">
-                  <div class="val">3120h</div>
-                  <div class="lbl">Total hours</div>
-                </div>
-              </div>
-              <div class="mock-s3-chart">
-                <div class="chart-title">MA Utilisation Rate (6-month)</div>
-                <svg viewBox="0 0 200 60" preserveAspectRatio="none" class="chart-svg">
-                  <path d="M0,42 L40,38 L80,34 L120,30 L160,26 L200,20 L200,60 L0,60 Z" fill="#dcfce7" opacity="0.7"/>
-                  <path d="M0,42 L40,38 L80,34 L120,30 L160,26 L200,20" fill="none" stroke="#166534" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                  <g fill="#166534">
-                    <circle cx="0" cy="42" r="1.6"/>
-                    <circle cx="40" cy="38" r="1.6"/>
-                    <circle cx="80" cy="34" r="1.6"/>
-                    <circle cx="120" cy="30" r="1.6"/>
-                    <circle cx="160" cy="26" r="1.6"/>
-                    <circle cx="200" cy="20" r="1.6"/>
-                  </g>
-                </svg>
-                <div class="chart-x">
-                  <span>Nov/25</span><span>Dec/25</span><span>Jan/26</span><span>Feb/26</span><span>Mar/26</span><span>Apr/26</span>
-                </div>
-              </div>
-            </div>
+            <img src="images/scheduler-admin.png" alt="RVSU Scheduler admin dashboard showing coverage forecast and pending requests">
           </div>
         </div>
         <div class="device-phone" aria-hidden="true">
           <div class="device-phone-screen">
-            <div class="mock-s3 phone">
-              <div style="height:14px;"></div>
-              <div class="mock-s3-card">
-                <div class="t-title">Time Clock</div>
-                <div class="t-sub">You are currently clocked out.</div>
-                <div class="clock-big">CLOCK IN</div>
-                <div class="t-help">GPS-verified within 300 m of any clinic.</div>
-              </div>
-              <div class="mock-s3-hourgrid">
-                <div class="hourcard">
-                  <div class="ht">This week</div>
-                  <div class="hv">32h</div>
-                  <div class="hbar"><div class="hfill" style="width:80%"></div></div>
-                </div>
-                <div class="hourcard">
-                  <div class="ht">Apr</div>
-                  <div class="hv">128h</div>
-                </div>
-              </div>
-            </div>
+            <img src="images/scheduler-phone.jpeg" alt="RVSU Scheduler mobile time clock with GPS-verified clock-in and weekly hours">
           </div>
         </div>
       </div>
@@ -2069,35 +2019,12 @@
       <div class="featured-visual">
         <div class="device-laptop" aria-hidden="true">
           <div class="device-laptop-screen">
-            <div class="mock-v2">
-              <div class="mock-v2-label">CHART</div>
-              <div class="mock-v2-title">Topic breakdown</div>
-              <div class="mock-v2-sub">Last 30 days. Bar length is volume; sigil at right shows net sentiment.</div>
-              <div class="mock-v2-rows">
-                <div class="mock-v2-row"><span class="lbl">wait time</span><div class="bar" style="width:96%"></div><span class="val">38 −</span></div>
-                <div class="mock-v2-row"><span class="lbl">provider comm</span><div class="bar" style="width:78%"></div><span class="val">31 +</span></div>
-                <div class="mock-v2-row"><span class="lbl">staff friendliness</span><div class="bar" style="width:68%"></div><span class="val">27 +</span></div>
-                <div class="mock-v2-row"><span class="lbl">scheduling</span><div class="bar" style="width:48%"></div><span class="val">19 −</span></div>
-                <div class="mock-v2-row"><span class="lbl">facility</span><div class="bar" style="width:36%"></div><span class="val">14 +</span></div>
-                <div class="mock-v2-row"><span class="lbl">intake</span><div class="bar" style="width:30%"></div><span class="val">12 −</span></div>
-                <div class="mock-v2-row"><span class="lbl">billing</span><div class="bar" style="width:22%"></div><span class="val">9 −</span></div>
-              </div>
-            </div>
+            <img src="images/insights-landing.png" alt="RVSU Insights patient feedback landing page — honest, anonymous, used to improve care">
           </div>
         </div>
         <div class="device-phone" aria-hidden="true">
           <div class="device-phone-screen">
-            <div class="mock-v3 phone">
-              <div style="height:14px;"></div>
-              <div class="mock-v3-brand">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="#166534" stroke-width="1.4"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="#166534" stroke-width="1.4"/><circle cx="12" cy="12" r="1.8" fill="#166534"/></svg>
-                <span>RVSU</span>
-              </div>
-              <div class="mock-v3-label">A NOTE TO OUR PATIENTS</div>
-              <div class="mock-v3-title">Patient feedback.</div>
-              <div class="mock-v3-sub">Honest, anonymous, used to improve care.</div>
-              <div class="mock-v3-body">A short anonymous survey — no names, no logins, just a minute of feedback that informs how we operate.</div>
-            </div>
+            <img src="images/insights-phone.png" alt="RVSU Insights mobile topic breakdown showing volume and sentiment by theme">
           </div>
         </div>
       </div>
