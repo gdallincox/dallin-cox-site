@@ -1132,6 +1132,45 @@
     justify-content: center;
   }
 
+  /* ===== FLOWCHART PAIR (no device mockup) ===== */
+  .flowchart-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    align-items: stretch;
+    position: relative;
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(15,31,61,0.05) 0%, rgba(15,31,61,0.02) 100%);
+    border-radius: 18px;
+    box-shadow:
+      inset 0 0 0 1px rgba(15,31,61,0.06),
+      0 30px 60px -25px rgba(15,31,61,0.22),
+      0 10px 24px -12px rgba(15,31,61,0.12);
+  }
+  .flowchart-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.85rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .flowchart-caption {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .flowchart-pane img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* ===== DEVICE: LAPTOP ===== */
   .device-laptop {
     position: relative;
@@ -1954,6 +1993,7 @@
     .device-laptop { max-width: 300px; }
     .device-phone { width: 100px; bottom: -20px; right: -10px; }
     .featured-title { font-size: 1.4rem; }
+    .flowchart-pair { grid-template-columns: 1fr; gap: 0.75rem; }
   }
 
   /* Mobile-first polish for section paddings */
@@ -2349,6 +2389,47 @@
         <div class="device-phone" aria-hidden="true">
           <div class="device-phone-screen">
             <img src="images/utahretina-service-phone.png" alt="Diabetic Retinopathy service page on utahretina.com mobile. Practice logo and page H1 blurred; body content, CTAs, and design system remain fully readable to show the redesigned site in production.">
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Prior Authorization Tracking -->
+    <article class="featured-card reverse reveal">
+      <div class="featured-content">
+        <div class="featured-status">Architecture phase</div>
+        <div class="project-tag">Healthcare Operations</div>
+        <h3 class="featured-title">Prior Authorization Tracking &mdash; Automating a manual high-volume workflow.</h3>
+        <div class="featured-url">Process mapping &middot; System architecture &middot; Drug-payer matrix</div>
+        <p class="featured-desc">A full process redesign for prior authorization tracking at a high-volume specialty practice processing 30,000+ annual patient visits. Mapped the existing manual spreadsheet workflow &mdash; color-coded by hand, sorted and re-sorted daily, with all expiration logic living in one staff member's head &mdash; then architected a future-state automation that keeps human judgment where it matters (clinical review, submission, appeals) and removes it where it doesn't (tier calculation, ingestion, metrics).</p>
+        <ul class="featured-feats">
+          <li>9-step manual workflow mapped end-to-end</li>
+          <li>Drug-payer reference matrix designed as canonical rule source</li>
+          <li>Four-tier urgency system: immediate / urgent / warning / monitored</li>
+          <li>Per-eye PA data model (OD / OS / OU laterality tracking)</li>
+          <li>Excel-based operational store sized for 30k+ annual visits</li>
+          <li>Automated tier calculation: PA expiry vs. next appointment date</li>
+          <li>Denial / appeal / peer-to-peer branch architected into workflow</li>
+          <li>Metrics writeback: turnaround time, approval rate, denial rate</li>
+          <li>EHR-agnostic ingest (works with any tabular export)</li>
+          <li>Manual workflow documented for stakeholder validation</li>
+        </ul>
+        <div class="featured-tools">
+          <span class="tool-tag">Excel</span>
+          <span class="tool-tag">Power Query</span>
+          <span class="tool-tag">Process Design</span>
+          <span class="tool-tag">Systems Architecture</span>
+        </div>
+      </div>
+      <div class="featured-visual">
+        <div class="flowchart-pair">
+          <div class="flowchart-pane">
+            <div class="flowchart-caption">Current state</div>
+            <img src="images/PA_CurrentState_Portfolio.svg" alt="Vertical flowchart of the manual prior authorization tracking process used today, with every staff action highlighted and the daily spreadsheet structure annotated alongside.">
+          </div>
+          <div class="flowchart-pane">
+            <div class="flowchart-caption">Future state</div>
+            <img src="images/PA_FutureState_Portfolio.svg" alt="Vertical flowchart of the automated prior authorization tracking system, including drug-payer matrix, tier calculation, denial and appeal branch, and metrics writeback.">
           </div>
         </div>
       </div>

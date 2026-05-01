@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 1120" role="img">
+<title>Future-state PA automation workflow, version 2</title>
+<desc>Vertical flowchart of the automated prior authorization tracking system. Manual steps in coral, automated steps in blue, output in green, reference data and persistent stores in purple. Includes a denial and appeal branch, drug-payer reference matrix feeding tier calculation, an explicit operational data store, a planned API integration path, and a metrics writeback step. A daily cycle return arrow loops from the bottom back to the export step at the top.</desc>
+
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #3d3d3a; }
+.th { font-size: 14px; font-weight: 500; }
+.ts { font-size: 12px; }
+.arr { stroke: #73726c; stroke-width: 1.5; fill: none; }
+.dashed-arr { stroke: #888780; stroke-width: 0.5; stroke-dasharray: 4 3; fill: none; }
+.c-coral { fill: #FAECE7; stroke: #993C1D; }
+.c-coral .th { fill: #712B13; stroke: none; }
+.c-coral .ts { fill: #993C1D; stroke: none; }
+.c-blue { fill: #E6F1FB; stroke: #185FA5; }
+.c-blue .th { fill: #0C447C; stroke: none; }
+.c-blue .ts { fill: #185FA5; stroke: none; }
+.c-green { fill: #EAF3DE; stroke: #3B6D11; }
+.c-green .th { fill: #27500A; stroke: none; }
+.c-green .ts { fill: #3B6D11; stroke: none; }
+.c-purple { fill: #EEEDFE; stroke: #534AB7; }
+.c-purple .th { fill: #3C3489; stroke: none; }
+.c-purple .ts { fill: #534AB7; stroke: none; }
+.c-gray { fill: #F1EFE8; stroke: #5F5E5A; }
+.c-gray .th { fill: #444441; stroke: none; }
+.c-gray .ts { fill: #5F5E5A; stroke: none; }
+@media (prefers-color-scheme: dark) {
+  text { fill: #c2c0b6; }
+  .arr { stroke: #b4b2a9; }
+  .dashed-arr { stroke: #b4b2a9; }
+  .c-coral { fill: #4A1B0C; stroke: #F0997B; }
+  .c-coral .th { fill: #F5C4B3; }
+  .c-coral .ts { fill: #F0997B; }
+  .c-blue { fill: #042C53; stroke: #85B7EB; }
+  .c-blue .th { fill: #B5D4F4; }
+  .c-blue .ts { fill: #85B7EB; }
+  .c-green { fill: #173404; stroke: #97C459; }
+  .c-green .th { fill: #C0DD97; }
+  .c-green .ts { fill: #97C459; }
+  .c-purple { fill: #26215C; stroke: #AFA9EC; }
+  .c-purple .th { fill: #CECBF6; }
+  .c-purple .ts { fill: #AFA9EC; }
+  .c-gray { fill: #2C2C2A; stroke: #B4B2A9; }
+  .c-gray .th { fill: #D3D1C7; }
+  .c-gray .ts { fill: #B4B2A9; }
+}
+</style>
+</defs>
+
+<rect class="c-coral" x="40" y="22" width="14" height="14" rx="3" stroke-width="0.5"/>
+<text class="ts" x="60" y="29" dominant-baseline="central">Manual</text>
+<rect class="c-blue" x="120" y="22" width="14" height="14" rx="3" stroke-width="0.5"/>
+<text class="ts" x="140" y="29" dominant-baseline="central">Automated</text>
+<rect class="c-green" x="230" y="22" width="14" height="14" rx="3" stroke-width="0.5"/>
+<text class="ts" x="250" y="29" dominant-baseline="central">Output</text>
+<rect class="c-purple" x="320" y="22" width="14" height="14" rx="3" stroke-width="0.5"/>
+<text class="ts" x="340" y="29" dominant-baseline="central">Data / reference</text>
+
+<g class="c-coral">
+<rect x="230" y="70" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="91" text-anchor="middle" dominant-baseline="central">Export appointment data</text>
+<text class="ts" x="340" y="109" text-anchor="middle" dominant-baseline="central">Manual: AMD or NexTech</text>
+</g>
+
+<g class="c-coral">
+<rect x="475" y="70" width="160" height="56" rx="8" stroke-width="0.5" stroke-dasharray="4 3"/>
+<text class="th" x="555" y="91" text-anchor="middle" dominant-baseline="central">API integration</text>
+<text class="ts" x="555" y="109" text-anchor="middle" dominant-baseline="central">(future state)</text>
+</g>
+
+<line x1="555" y1="126" x2="555" y2="180" class="dashed-arr"/>
+<line x1="555" y1="180" x2="450" y2="180" class="dashed-arr" marker-end="url(#arrow)"/>
+
+<line x1="340" y1="126" x2="340" y2="154" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue">
+<rect x="230" y="154" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="175" text-anchor="middle" dominant-baseline="central">Ingest and validate export</text>
+<text class="ts" x="340" y="193" text-anchor="middle" dominant-baseline="central">Parse, dedupe, store</text>
+</g>
+
+<line x1="340" y1="210" x2="340" y2="238" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue">
+<rect x="230" y="238" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="259" text-anchor="middle" dominant-baseline="central">Calculate tier</text>
+<text class="ts" x="340" y="277" text-anchor="middle" dominant-baseline="central">PA expiry vs. next appt</text>
+</g>
+
+<g class="c-purple">
+<rect x="30" y="238" width="180" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="120" y="259" text-anchor="middle" dominant-baseline="central">Drug-payer matrix</text>
+<text class="ts" x="120" y="277" text-anchor="middle" dominant-baseline="central">PA rules + lead times</text>
+</g>
+
+<line x1="210" y1="266" x2="230" y2="266" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-purple">
+<rect x="470" y="238" width="180" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="560" y="259" text-anchor="middle" dominant-baseline="central">Operational store</text>
+<text class="ts" x="560" y="277" text-anchor="middle" dominant-baseline="central">Sheets / Excel</text>
+</g>
+
+<line x1="450" y1="262" x2="470" y2="262" class="arr" marker-end="url(#arrow)"/>
+<line x1="470" y1="270" x2="450" y2="270" class="arr" marker-end="url(#arrow)"/>
+
+<line x1="340" y1="294" x2="340" y2="322" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green">
+<rect x="230" y="322" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="343" text-anchor="middle" dominant-baseline="central">Dashboard updates</text>
+<text class="ts" x="340" y="361" text-anchor="middle" dominant-baseline="central">Sorted and flagged by tier</text>
+</g>
+
+<text class="ts" x="470" y="395" dominant-baseline="hanging">Tier flags:</text>
+<text class="ts" x="470" y="411" dominant-baseline="hanging">No PA &#8594; immediate</text>
+<text class="ts" x="470" y="427" dominant-baseline="hanging">0&#8211;30 days &#8594; urgent</text>
+<text class="ts" x="470" y="443" dominant-baseline="hanging">31&#8211;60 days &#8594; warning</text>
+<text class="ts" x="470" y="459" dominant-baseline="hanging">60+ days &#8594; monitored</text>
+
+<line x1="340" y1="378" x2="340" y2="406" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-gray">
+<rect x="240" y="406" width="200" height="56" rx="28" stroke-width="0.5"/>
+<text class="th" x="340" y="434" text-anchor="middle" dominant-baseline="central">Patients flagged?</text>
+</g>
+
+<line x1="240" y1="434" x2="200" y2="434" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="195" y="430" text-anchor="end">No &#8594; wait</text>
+
+<line x1="340" y1="462" x2="340" y2="490" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-coral">
+<rect x="230" y="490" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="518" text-anchor="middle" dominant-baseline="central">Staff reviews flagged list</text>
+</g>
+
+<line x1="340" y1="546" x2="340" y2="574" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-coral">
+<rect x="230" y="574" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="602" text-anchor="middle" dominant-baseline="central">Submit PA request</text>
+</g>
+
+<line x1="340" y1="630" x2="340" y2="658" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-coral">
+<rect x="230" y="658" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="679" text-anchor="middle" dominant-baseline="central">Determination received</text>
+<text class="ts" x="340" y="697" text-anchor="middle" dominant-baseline="central">Approval or denial</text>
+</g>
+
+<line x1="340" y1="714" x2="340" y2="742" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-gray">
+<rect x="240" y="742" width="200" height="56" rx="28" stroke-width="0.5"/>
+<text class="th" x="340" y="770" text-anchor="middle" dominant-baseline="central">Approved?</text>
+</g>
+
+<line x1="240" y1="770" x2="210" y2="770" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="225" y="762" text-anchor="middle">No</text>
+
+<g class="c-coral">
+<rect x="30" y="742" width="180" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="120" y="763" text-anchor="middle" dominant-baseline="central">Appeal / peer-to-peer</text>
+<text class="ts" x="120" y="781" text-anchor="middle" dominant-baseline="central">Resubmit for review</text>
+</g>
+
+<path d="M 120 742 L 120 640 L 340 640 L 340 658" class="arr" marker-end="url(#arrow)"/>
+
+<line x1="340" y1="798" x2="340" y2="826" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-coral">
+<rect x="230" y="826" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="847" text-anchor="middle" dominant-baseline="central">Log approval + expiry</text>
+<text class="ts" x="340" y="865" text-anchor="middle" dominant-baseline="central">Manual entry into store</text>
+</g>
+
+<line x1="340" y1="882" x2="340" y2="910" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue">
+<rect x="230" y="910" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="931" text-anchor="middle" dominant-baseline="central">Update tier automatically</text>
+<text class="ts" x="340" y="949" text-anchor="middle" dominant-baseline="central">System recomputes</text>
+</g>
+
+<line x1="340" y1="966" x2="340" y2="994" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue">
+<rect x="230" y="994" width="220" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="1015" text-anchor="middle" dominant-baseline="central">Write metrics</text>
+<text class="ts" x="340" y="1033" text-anchor="middle" dominant-baseline="central">TAT, approval, denial rate</text>
+</g>
+
+<path d="M 340 1050 L 340 1080 L 15 1080 L 15 98 L 230 98" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="80" y="1068" text-anchor="middle">Daily cycle</text>
+</svg>
